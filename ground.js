@@ -20,7 +20,7 @@ class ground{
 			rectMode(CENTER)
 			strokeWeight(4);
 			fill(255,255,0)
-			rect(0,0,this.w, this.h);
+			rect(0,0,this.width, this.height);
 			pop()
 			
 	}
