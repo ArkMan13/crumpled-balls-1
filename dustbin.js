@@ -7,9 +7,9 @@ class dustbin{
        this.wallThickness=20;
        this.angle=0;
        this.bottomBody=Bodies.rectangle(this.x,this.y,this.dustbinWidth,this.wallThickness,{isStatic:true});
-       this.leftBody=Bodies.rectangle(this.x-this.dustbinWidth/2,this.y-this.dustbinHeight/2,this.dustbinWidth,this.wallThickness,{isStatic:true});
-       this.rightBody=Bodies.rectangle(this.x+this.dustbinWidth/2,this.y-this.dustbinHeight/2,this.dustbinWidth,this.wallThickness,{isStatic:true});
-       Matter.Body.setAngle(this.rightBody,this.angle);
+       this.leftBody=Bodies.rectangle(this.x-this.dustbinWidth/2,this.y-this.dustbinHeight/2,this.wallThickness,this.dustbinHeight,{isStatic:true});
+       this.rightBody=Bodies.rectangle(this.x+this.dustbinWidth/2,this.y-this.dustbinHeight/2,this.wallThickness,this.dustbinHeight,{isStatic:true});
+       Matter.Body.setAngle(this.rightBody, -1*this.angle);
        Matter.Body.setAngle(this.leftBody,this.angle);
        World.add(world,this.bottomBody);
        World.add(world,this.leftBody);
